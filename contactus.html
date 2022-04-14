@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html>
+
+<style type="text/css">
+
+form {
+	background-color: #c9c9c9;
+	width: 60%;
+	margin: auto;
+	padding: 25px;
+}
+
+h2 {
+	text-align: center;
+}
+
+
+input {
+	background-color: #ffb0b0;
+}
+
+#id1 {
+	background-color: #a8c8ff;
+}
+
+</style>
+
+<head>
+
+<title>Sbarra Italiano Contact Us</title>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="images/sbarra-logo.png" alt="Sbarra Italiano Logo" width="150" height="150">
+
+<h1>Contact Us!</h1>
+
+</header>
+<nav></nav>
+<main>
+
+<h2>Questions, comments, or concerns? Please tell us below!</h2>
+<form action="" method="post" autocomplete="on">
+
+<label>First Name</label> <br>
+<input type="text" name="firstname" required> <br>
+
+<label>Last Name</label> <br>
+<input type="text" name="lastname" required> <br>
+
+<label>Email Address</label> <br>
+<input type="text" name="email" autocomplete="off" required> <br>
+
+<label>Phone Number</label> <br>
+<input type="text" name="phone"> <br>
+
+<label>Comments</label> <br>
+<textarea name="comments" rows="5" cols="50"> </textarea> <br>
+
+
+
+<h2>Enter your four-digit passcode, then click OK:</h2>
+<input id="id1" type="number" min="1000" max="9999">
+<button onclick= "myFunction()">OK</button>
+<p id="passcode"></p>
+<script>
+function myFunction() {
+var inpObj = document.getElementById("id1");
+if (inpObj.checkValidity() == false) {
+document.getElementById("passcode").innerHTML =
+inpObj.validationMessage;
+} else {
+document.getElementById("passcode").innerHTML = "Passcode Valid";
+}
+}
+</script> <br>
+
+<label>Rate your visit</label> <br>
+<input type="radio" name="rating" value="5"> <label>5</label> <br>
+<input type="radio" name="rating" value="4"> <label>4</label> <br>
+<input type="radio" name="rating" value="3"> <label>3</label> <br>
+<input type="radio" name="rating" value="2"> <label>2</label> <br>
+<input type="radio" name="rating" value="1"> <label>1</label> <br>
+
+<label>Where did you visit?</label> <br>
+<input type="checkbox" name="visit" value="bar"> <label>Bar</label> <br>
+<input type="checkbox" name="visit" value="restaraunt"> <label>Restaraunt</label> <br>
+
+<label>How did you hear about us?</label> <br>
+<select name="fromwhere" id="fromwhere">
+	<option value="website">Website</option>
+	<option value="social">Social Media</option>
+	<option value="ad">Advertisement</option>
+	<option value="drive"> Drive By</option>
+</select> <br>
+
+<input type="submit" value="Submit">
+
+</form>
+
+</main>
+<footer></footer>
+
+</body>
+
+</html>
